@@ -43,11 +43,11 @@ window.addEventListener('DOMContentLoaded', (ev0) => {
 					<div class="contenedor">
 						<nav class="menu">
 							<ul>
-								<li><a href="#">Inicio</a></li>
-								<li><a href="#">Blog</a></li>
+								<li><a href="#">Home</a></li>
+								<!-- <li><a href="#">Blog</a></li> -->
 								<li><a href="#"><img src="./images/logoArvies.svg" alt="Logo Arvies"></a></li>
-								<li><a href="#">Trabajos</a></li>
-								<li><a href="#">Contacto</a></li>
+								<!-- <li><a href="#">Trabajos</a></li> -->
+								<li><a href="./contact-us.html">Contact Us</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -244,13 +244,14 @@ window.addEventListener('DOMContentLoaded', (ev0) => {
 						<p><span>let's join our newsletter.</span></p>
 						<p>Stay ahead of the fashion curve and elevate your every moment with our exclusive designs, the epitome of elegance and style in our latest newsletter. Sign up now to be the first to explore the latest trends and receive exclusive offers.</p>
 					</div>
-					<form id="contact_info" action="submission.php" method="get">
+					<form id="contact_info" >
 						<!-- <div>
 							<input type="text" name="user" id="user" required size="25" maxlength="50" placeholder="User Name">
 						</div> -->
 						<div>
 							<input type="text" name="email" id="email" required size="25" maxlength="50" placeholder="E-Mail">
-							<button class="readMore" style="background: black;">Join us!</button>
+							
+							<button class="readMore" style="background: black;" onclick="return alert('Form submitted successfully!'); return false;">Join us!</button>
 						</div>
 						<!-- <div> 
 							<input type="password" name="password" id="password" required size="25" maxlength="50" placeholder="Password">
