@@ -1,285 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" >
-		<title>CSS - Arvies Watches</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-		<script src="./js/jquery-latest.js"></script>
-		<script src="./js/main.js"></script>
-		<link rel="shortcut icon" href="images/Fabicon.svg" type="image/x-icon">
-		<script>
-// esta funcion comprueba si un elemento esta visible en pantalla
-function isVisible(elm) {
-	var rect = elm.getBoundingClientRect();
-	var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-	return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-}
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS - Arvies Watches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="./js/jquery-latest.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="shortcut icon" href="images/Fabicon.svg" type="image/x-icon" />
+    <script>
+      // esta funcion comprueba si un elemento esta visible en pantalla
+      function isVisible(elm) {
+        var rect = elm.getBoundingClientRect();
+        var viewHeight = Math.max(
+          document.documentElement.clientHeight,
+          window.innerHeight
+        );
+        return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+      }
 
-// cuando se carga la página...
-window.addEventListener('DOMContentLoaded', (ev0) => {
+      // cuando se carga la página...
+      window.addEventListener("DOMContentLoaded", (ev0) => {
         // asignamos un evento scroll...
-	window.addEventListener('scroll', (ev1) => {
-                // y a todos los elementos con la clase paused...
-		document.querySelectorAll(".paused").forEach(elm => {
-			if (isVisible(elm)) // que sean visibles...
-				elm.classList.remove("paused"); // les quitamos la clase paused
-		})
-	});
-});
+        window.addEventListener("scroll", (ev1) => {
+          // y a todos los elementos con la clase paused...
+          document.querySelectorAll(".paused").forEach((elm) => {
+            if (isVisible(elm))
+              // que sean visibles...
+              elm.classList.remove("paused"); // les quitamos la clase paused
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header class="home">
+        <section class="parallax-bg">
+          <div class="contenedor">
+            <nav class="menu">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <!-- <li><a href="#">Blog</a></li> -->
+                <li>
+                  <a href="./index.html"
+                    ><img src="./images/logoArvies.svg" alt="Logo Arvies"
+                  /></a>
+                </li>
+                <!-- <li><a href="#">Trabajos</a></li> -->
+                <li><a href="./contact-us.html">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="home_content1">
+            <div>
+              <h2>Style and Elegance</h2>
+              <h1>Arvies</h1>
+              <p>
+                Everything you need to look sophisticated and modern. An
+                unforgettable gift. The perfect combination of memories and
+                perfection
+              </p>
+              <a href="#" class="readMore">READ MORE</a>
+            </div>
+          </div>
+        </section>
+      </header>
 
-		</script>
-	</head>
-	<body>
-		
-		<div id="container">
+      <main>
+        <section id="hero" class="paused">
+          <section id="s2" class="wrapper">
+            <h2>As your lifestyle...</h2>
+            <p>
+              Your personality and lifestyle represents the way you see the
+              life... the time
+            </p>
+            <ul class="anim-down">
+              <li>
+                <a href="#sports-outdoor">
+                  <figure>
+                    <img
+                      src="images/lifeStyle_01.jpg"
+                      alt="Sports and Outdoor"
+                    />
+                    <figcaption>Sports and Outdoor</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#business-executive">
+                  <figure>
+                    <img
+                      src="images/lifeStyle_02.jpg"
+                      alt="Business Executive"
+                    />
+                    <figcaption>Business Executive</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#classic-Elegance">
+                  <figure>
+                    <img src="images/lifeStyle_03.jpg" alt="Classic Elegance" />
+                    <figcaption>Classic Elegance</figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </section>
 
-			<header class="home"> 
-				<section class="parallax-bg">
-					
-					<div class="contenedor">
-						<nav class="menu">
-							<ul>
-								<li><a href="./index.html">Home</a></li>
-								<!-- <li><a href="#">Blog</a></li> -->
-								<li><a href="./index.html"><img src="./images/logoArvies.svg" alt="Logo Arvies"></a></li>
-								<!-- <li><a href="#">Trabajos</a></li> -->
-								<li><a href="./contact-us.html">Contact Us</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="home_content1">
-						<div>
-						<H2>Style and Elegance</H2>
-						<h1>Arvies</h1>
-						<p>Everything you need to look sophisticated and modern. An unforgettable gift. The perfect combination of memories and perfection</p>
-						<a href="#" class="readMore">READ MORE</a>
-						</div>
-					</div>
-				</section>
-			</header>
-			
-			<main>	
+          <section id="s22">
+            <div>
+              <h2>Sophistication and Style</h2>
+              <p>
+                Indulge in the perfect blend of sophistication and style with
+                our curated collection of watches. Each timepiece is a testament
+                to refined taste and contemporary elegance. From sleek, modern
+                designs to classic elements, our watches seamlessly marry
+                sophistication with a flair for style. Elevate every moment with
+                a touch of luxury on your wrist, showcasing your impeccable
+                sense of fashion. Whether it's a formal affair or a casual
+                outing, let your watch be a reflection of your discerning taste.
+                Redefine your presence with a watch that embodies the essence of
+                sophistication and style.
+              </p>
+            </div>
+          </section>
 
+          <section id="features" class="paused">
+            <div class="wrapper">
+              <h1 class="anim-left">Incomparable...</h1>
+              <p class="anim-right">New arrivals</p>
+              <ul>
+                <li class="anim-fade-in anim-pause-2">
+                  <figure>
+                    <img src="./images/Sports.jpg" alt="Sports and Outdoor" />
+                  </figure>
+                  <div class="text" id="sports-outdoor">
+                    <h3>Sports and Outdoor</h3>
+                    <p>
+                      Dive into the excitement of our new Sports and Outdoor
+                      watch collection. Unleash style and functionality with
+                      cutting-edge designs crafted for every adventure. From
+                      rugged durability to precision engineering, these
+                      timepieces are your perfect outdoor companions.
+                    </p>
+                    <a href="#" class="readMore">READ MORE</a>
+                  </div>
+                </li>
+                <li class="anim-fade-in anim-pause-2">
+                  <div class="text" id="business-executive">
+                    <h3>Business Executive</h3>
+                    <p>
+                      Make a lasting impression in the boardroom with our
+                      Business Watches collection. Elevate your professional
+                      style with sophisticated timepieces designed for success.
+                      From sleek and minimalist designs to timeless classics,
+                      each watch exudes confidence and refinement.
+                    </p>
+                    <a href="#" class="readMore">READ MORE</a>
+                  </div>
+                  <figure>
+                    <img
+                      src="./images/Executive.jpg"
+                      alt="Business Executive"
+                    />
+                  </figure>
+                </li>
+                <li class="anim-fade-in anim-pause-2">
+                  <figure>
+                    <img src="./images/Elegance.jpg" alt="Classic Elegance" />
+                  </figure>
+                  <div class="text" id="classic-Elegance">
+                    <h3>Classic Elegance</h3>
+                    <p>
+                      Step into timeless sophistication with our Classic
+                      Elegance watch collection. These watches are more than
+                      accessories—they're statements of refined taste. With
+                      designs that transcend trends, our timepieces exude a
+                      quiet, enduring elegance.
+                    </p>
+                    <a href="#" class="readMore">READ MORE</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="paused">
+            <div class="wrapper">
+              <h1 class="anim-down">Titulo Grande 1</h1>
+              <p class="anim-up">Bajada grande 1 ...</p>
+            </div>
+          </section>
 
-				<section id="hero" class="paused">
-					<section id="s2" class="wrapper">
-						<h2>As your lifestyle...</h2>
-						<p>Your personality and lifestyle represents the way you see the life... the time</p>
-						<ul  class="anim-down">
-							<li>
-								<a href="#sports-outdoor">
-									<figure>
-										<img src="images/lifeStyle_01.jpg" alt="Sports and Outdoor">
-										<figcaption>Sports and Outdoor</figcaption>
-									</figure>
-								</a>
-							</li>
-							<li>
-								<a href="#business-executive">
-									<figure>	
-										<img src="images/lifeStyle_02.jpg" alt="Business Executive">
-										<figcaption>Business Executive</figcaption>
-									</figure>
-								</a>
-							</li>
-							<li>
-								<a href="#classic-Elegance">
-									<figure>
-										<img src="images/lifeStyle_03.jpg" alt="Classic Elegance">
-										<figcaption>Classic Elegance</figcaption>
-									</figure>
-								</a>
-							</li>
-						</ul>								
-					</section>
-				
-					<section id="s22">
-						<div>
-							<h2>Sophistication and Style</h2>
-							<p>Indulge in the perfect blend of sophistication and style with our curated collection of watches. Each timepiece is a testament to refined taste and contemporary elegance. From sleek, modern designs to classic elements, our watches seamlessly marry sophistication with a flair for style. Elevate every moment with a touch of luxury on your wrist, showcasing your impeccable sense of fashion. Whether it's a formal affair or a casual outing, let your watch be a reflection of your discerning taste. Redefine your presence with a watch that embodies the essence of sophistication and style. </p>
-						</div>	
-					</section>
+          <!-- Slideshow container -->
+          <section id="container-slider">
+            <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"
+              >&#10094;</a
+            >
+            <a
+              href="javascript: funcionEjecutar('siguiente');"
+              class="arrowNext"
+              >&#10095;</a
+            >
+            <ul class="listslider" style="display: none">
+              <li>
+                <a itlist="itList_0" href="#" class="item-select-slid"></a>
+              </li>
+              <li><a itlist="itList_1" href="#"></a></li>
+              <li><a itlist="itList_2" href="#"></a></li>
+            </ul>
+            <ul id="slider">
+              <li style="z-index: 0; opacity: 1">
+                <div class="content_slider">
+                  <div>
+                    <figure>
+                      <img src="./images/Slider/Slider1.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Ideal paran aventuras outdoor</p>
+                    </figure>
+                    <figure>
+                      <img src="./images/Slider/Slider2.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 2</p>
+                    </figure>
+                    <figure>
+                      <img src="./images/Slider/Slider3.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 3</p>
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li style="background-image: transparent">
+                <div class="content_slider">
+                  <div>
+                    <figure>
+                      <img src="./images/Slider/Slider4.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 4</p>
+                    </figure>
+                    <figure>
+                      <img src="./images/Slider/Slider5.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 5</p>
+                    </figure>
+                    <figure>
+                      <img src="./images/Slider/Slider1.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 6</p>
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li style="background-image: transparent">
+                <div class="content_slider">
+                  <div>
+                    <figure>
+                      <img src="./images/Slider/Slider3.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 7</p>
+                    </figure>
+                    <figure>
+                      <img src="./images/Slider/Slider4.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 8</p>
+                    </figure>
+                    <figure>
+                      <img src="./images/Slider/Slider2.jpeg" />
+                      <figcaption>Nombre del Reloj</figcaption>
+                      <p>Sobre la imagen número 9</p>
+                    </figure>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <!-- end slideshow container -->
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer id="footer">
+        <h2>Be part of our community</h2>
+        <!-- Social networks with some buttons disabled -->
+        <!-- Style links in the footer to change color when hovered over. -->
 
-				<section id="features" class="paused">
-					<div class="wrapper">
-					  <h1 class="anim-left">Incomparable...</h1>
-					  <p class="anim-right">New arrivals</p>
-					  <ul>
-						<li class="anim-fade-in anim-pause-2">
-							<figure>
-								<img src="./images/Sports.jpg" alt="Sports and Outdoor">
-							</figure>
-							<div class="text" id="sports-outdoor">
-								<h3>Sports and Outdoor</h3>
-								<p>
-									Dive into the excitement of our new Sports and Outdoor watch collection. Unleash style and functionality with cutting-edge designs crafted for every adventure. From rugged durability to precision engineering, these timepieces are your perfect outdoor companions.</p>
-								<a href="#" class="readMore">READ MORE</a>
-							</div>
-						</li>
-						<li class="anim-fade-in anim-pause-2">
-							<div class="text" id="business-executive">
-								<h3>Business Executive</h3>
-								<p>Make a lasting impression in the boardroom with our Business Watches collection. Elevate your professional style with sophisticated timepieces designed for success. From sleek and minimalist designs to timeless classics, each watch exudes confidence and refinement.</p>
-								<a href="#" class="readMore">READ MORE</a>
-							</div>
-							<figure>
-								<img src="./images/Executive.jpg" alt="Business Executive">
-							</figure>
-							
-						</li>
-						<li class="anim-fade-in anim-pause-2">
-							<figure>
-								<img src="./images/Elegance.jpg" alt="Classic Elegance">
-							</figure>
-							<div class="text" id="classic-Elegance">
-								<h3>Classic Elegance</h3>
-								<p>Step into timeless sophistication with our Classic Elegance watch collection. These watches are more than accessories—they're statements of refined taste. With designs that transcend trends, our timepieces exude a quiet, enduring elegance.</p>
-								<a href="#" class="readMore">READ MORE</a>
-							</div>
-						</li>
-					  </ul>
-					</div>
-				  </section>
-				<section class="paused">
-					<div class="wrapper">
-					  <h1 class="anim-down">Titulo Grande 1</h1>
-					  <p class="anim-up">Bajada grande 1 ...</p>
-					</div>
-				</section>
-				  
-					
-
-
-<!-- Slideshow container -->
-<section id="container-slider">	
-	<a href="javascript: funcionEjecutar('anterior');" class="arrowPrev">&#10094;</a>
-	<a href="javascript: funcionEjecutar('siguiente');" class="arrowNext">&#10095;</a>
-	<ul class="listslider" style="display: none;">
-	  <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
-	  <li><a itlist="itList_1" href="#"></a></li>
-	  <li><a itlist="itList_2" href="#"></a></li>
-	</ul>
-	<ul id="slider">
-	  <li style="z-index:0; opacity: 1;">
-		<div class="content_slider" >
-		   <div>
-			<figure>
-				<img src="./images/Slider/Slider1.jpeg">
-                <figcaption>Nombre del Reloj</figcaption>
-                <p>Ideal paran aventuras outdoor</p>           
-            </figure>
-            <figure>
-				<img src="./images/Slider/Slider2.jpeg">
-                <figcaption>Nombre del Reloj</figcaption>
-                <p>Sobre la imagen número 2</p>  
-            </figure>
-            <figure>
-				<img src="./images/Slider/Slider3.jpeg">
-                <figcaption>Nombre del Reloj</figcaption>
-                <p>Sobre la imagen número 3</p>
-            </figure>
-		</div>
-	  </li>
-	  <li style="background-image:transparent; ">
-		<div class="content_slider" >
-			<div>
-				<figure>
-					<img src="./images/Slider/Slider4.jpeg">
-					<figcaption>Nombre del Reloj</figcaption>
-					<p>Sobre la imagen número 4</p>
-				</figure>
-				<figure>
-					<img src="./images/Slider/Slider5.jpeg">
-					<figcaption>Nombre del Reloj</figcaption>
-					<p>Sobre la imagen número 5</p>
-				</figure>
-				<figure>
-					<img src="./images/Slider/Slider1.jpeg">
-					<figcaption>Nombre del Reloj</figcaption>
-					<p>Sobre la imagen número 6</p>
-				</figure>
-			</div>
-		</div>
-	  </li>
-	  <li style="background-image: transparent; ">
-		<div class="content_slider" >
-			<div>
-				<figure>
-					<img src="./images/Slider/Slider3.jpeg">
-					<figcaption>Nombre del Reloj</figcaption>
-					<p>Sobre la imagen número 7</p>
-				</figure>
-				<figure>
-					<img src="./images/Slider/Slider4.jpeg">
-					<figcaption>Nombre del Reloj</figcaption>
-					<p>Sobre la imagen número 8</p>
-				</figure>
-				<figure>
-					<img src="./images/Slider/Slider2.jpeg">
-					<figcaption>Nombre del Reloj</figcaption>
-					<p>Sobre la imagen número 9</p>
-				</figure>
-			</div>
-		</div>
-	  </li>
-   </ul>
- </section>
- <!-- end slideshow container -->
-
-
-				<!-- Footer -->	
-			<footer id="footer">
-				<h2>Be part of our community</h2>
-				<!-- Social networks with some buttons disabled -->	
-				<!-- Style links in the footer to change color when hovered over. -->
-
-				<section id="s4">
-					<div class="formText">
-						<p><span>let's join our newsletter.</span></p>
-						<p>Stay ahead of the fashion curve and elevate your every moment with our exclusive designs, the epitome of elegance and style in our latest newsletter. Sign up now to be the first to explore the latest trends and receive exclusive offers.</p>
-					</div>
-					<form id="contact_info" >
-						<!-- <div>
+        <section id="s4">
+          <div class="formText">
+            <p><span>let's join our newsletter.</span></p>
+            <p>
+              Stay ahead of the fashion curve and elevate your every moment with
+              our exclusive designs, the epitome of elegance and style in our
+              latest newsletter. Sign up now to be the first to explore the
+              latest trends and receive exclusive offers.
+            </p>
+          </div>
+          <form id="contact_info">
+            <!-- <div>
 							<input type="text" name="user" id="user" required size="25" maxlength="50" placeholder="User Name">
 						</div> -->
-						<div>
-							<input type="text" name="email" id="email" required size="25" maxlength="50" placeholder="E-Mail">
-							
-							<button class="readMore" style="background: black;" onclick="return alert('Form submitted successfully!'); return false;">Join us!</button>
-						</div>
-						<!-- <div> 
+            <div>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                required
+                size="25"
+                maxlength="50"
+                placeholder="E-Mail"
+              />
+
+              <button
+                class="readMore"
+                style="background: black"
+                onclick="return alert('Form submitted successfully!'); return false;"
+              >
+                Join us!
+              </button>
+            </div>
+            <!-- <div> 
 							<input type="password" name="password" id="password" required size="25" maxlength="50" placeholder="Password">
 						</div> -->
-           			 </form>
-				</section>
-				<nav id="social">
-				
-				<ul>
-					<li><a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"></a></li>
-					<li><a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"></a></li>
-					<li><a href="#" target="_blank"><img src="images/facebook.svg" alt="facebook"></a></li>
-					<li><a href="#" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"></a></li>
-				</ul>
-				</nav>
+          </form>
+        </section>
+        <nav id="social">
+          <ul>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/whatsapp.svg" alt="whatsapp"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/facebook.svg" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/tik-tok.svg" alt="tik-tok"
+              /></a>
+            </li>
+          </ul>
+        </nav>
 
-				
-
-
-				<!-- Style links in the footer to change color when hovered over. With an underline.-->	
-				<nav id="links">
-					<ul>
-						<li style="color:#a5834c; border: 0px;">References:</li>
-					<li><a href="#" target="_blank">Website</a></li>
-					<li><a href="#" target="_blank">Archives</a></li>
-					<li><a href="#" target="_blank">Images from Freepik</a></li>
-				</ul>
-				</nav>
-			</footer>
-			</main>
-		</div>
-		<script src="js/gallery.js"></script>
-	</body>
+        <!-- Style links in the footer to change color when hovered over. With an underline.-->
+        <nav id="links">
+          <ul>
+            <li style="color: #a5834c; border: 0px">References:</li>
+            <li><a href="#" target="_blank">Website</a></li>
+            <li><a href="#" target="_blank">Archives</a></li>
+            <li><a href="#" target="_blank">Images from Freepik</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    <script src="js/gallery.js"></script>
+  </body>
 </html>
