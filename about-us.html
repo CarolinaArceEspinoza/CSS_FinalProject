@@ -14,6 +14,7 @@
     <script src="./js/main.js"></script>
     <link rel="shortcut icon" href="images/Fabicon.svg" type="image/x-icon" />
     <script>
+      // esta funcion comprueba si un elemento esta visible en pantalla
       function isVisible(elm) {
         var rect = elm.getBoundingClientRect();
         var viewHeight = Math.max(
@@ -22,10 +23,16 @@
         );
         return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
       }
+
+      // cuando se carga la página...
       window.addEventListener("DOMContentLoaded", (ev0) => {
+        // asignamos un evento scroll...
         window.addEventListener("scroll", (ev1) => {
+          // y a todos los elementos con la clase paused...
           document.querySelectorAll(".paused").forEach((elm) => {
-            if (isVisible(elm)) elm.classList.remove("paused");
+            if (isVisible(elm))
+              // que sean visibles...
+              elm.classList.remove("paused"); // les quitamos la clase paused
           });
         });
       });
@@ -50,49 +57,71 @@
               </ul>
             </nav>
           </div>
+          <div class="home_content1">
+            <div>
+              <!-- <h1>Arvies</h1> -->
+              <h2>About us</h2>
+              <p>
+                Welcome to Arvies, where time becomes an exquisite expression of
+                style and sophistication. At Arvies, we believe that a watch is
+                more than just a timekeeping device, it's a reflection of your
+                personality, an embodiment of craftsmanship, and a testament to
+                enduring elegance.
+              </p>
+              <!-- <a href="#" class="readMore">READ MORE</a> -->
+            </div>
+          </div>
         </section>
       </header>
 
       <main>
         <section id="hero" class="paused">
+          <section id="s22" class="wrapper">
+            <h2>Our Story</h2>
+            <p>
+              Arvies was born out of a passion for horology and a desire to
+              redefine the way we perceive timepieces. Established in 1986, we
+              set out on a journey to curate a collection of watches that
+              seamlessly blend timeless design with contemporary flair. Each
+              Arvies timepiece is a testament to precision engineering and a
+              commitment to quality.
+            </p>
+          </section>
+
           <section id="s22">
             <div>
-              <h2>Contact Us</h2>
+              <h2>Our Mission</h2>
               <p>
-                Welcome to Arvies Watches! Your time is our priority, and we're
-                here to assist you every step of the way. Should you have any
-                questions, concerns, or simply want to share your feedback,
-                don't hesitate to reach out. Our dedicated team is committed to
-                ensuring you have an exceptional shopping experience.
+                Our mission at Arvies is to offer more than just watches; we aim
+                to provide an experience, a moment frozen in time that
+                accompanies you through life's milestones. We strive to create
+                watches that not only adorn your wrist but also tell a story,
+                sparking conversations and creating lasting memories.
               </p>
-              <form id="contact_info" action="index.html">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+            </div>
+          </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+          <section id="s22" class="wrapper">
+            <div>
+              <h2>Craftsmanship</h2>
+              <p>
+                Arvies are meticulously crafted by skilled artisans who share
+                our dedication to excellence. From the intricate details of the
+                dial to the seamless movement of the hands, every element is
+                thoughtfully designed to elevate your timekeeping experience.
+              </p>
+            </div>
+          </section>
 
-                <label for="message">Message:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                ></textarea>
-
-                <input
-                  class="readMore"
-                  type="submit"
-                  name="submit"
-                  value="Submit"
-                />
-              </form>
-
-              <script>
-                function submitForm() {
-                  alert("Form submitted successfully!");
-                }
-              </script>
+          <section id="s22">
+            <div>
+              <h2>Sustainability</h2>
+              <p>
+                We are committed to sustainable practices in our production
+                processes. Arvies Watches are not just a fashion statement; they
+                represent our commitment to ethical and environmentally
+                conscious manufacturing.
+              </p>
             </div>
           </section>
         </section>
@@ -114,9 +143,6 @@
             </p>
           </div>
           <form id="contact_info">
-            <!-- <div>
-                            <input type="text" name="user" id="user" required size="25" maxlength="50" placeholder="User Name">
-                        </div> -->
             <div>
               <input
                 type="text"
@@ -136,9 +162,6 @@
                 Join us!
               </button>
             </div>
-            <!-- <div> 
-                            <input type="password" name="password" id="password" required size="25" maxlength="50" placeholder="Password">
-                        </div> -->
           </form>
         </section>
         <nav id="social">
