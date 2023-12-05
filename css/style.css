@@ -155,7 +155,7 @@ body {
     border: 1px solid #e1b989;
     color: #e1b989;
     padding: 10px 20px;
-    margin-top: 10px;
+    margin: 10px 0px;
     display: inline-block;
     text-decoration: none;
     border-radius: 3px;
@@ -177,14 +177,14 @@ h1 {
 }
 h2 {
     color: white;
-    font-size: 4vw;
+    font-size: 50px;
     padding: 0px;
     margin: 0px;
     width: auto;
     display: inline-block;
     font-family: 'Ephesis', cursive;
     font-weight: lighter;
-    line-height: 5vw;
+    line-height: 55px;
 }
 p {
     color: white;
@@ -555,13 +555,14 @@ footer #social ul li {
 	display: block;
 }
 footer #social ul li a {
-    padding: 14px 16px;
+    padding: 16px 16px 11px 16px;;
     border-radius: 50%;
     transition: all 0.5s ease-in-out;
     display: block;
 }
 footer #social ul li a:hover {
 	background: #5c5c5c;
+    border-radius: 10%;
     background-size: 100%;
 }
 footer #social ul img {
@@ -605,7 +606,7 @@ padding: 32px;
 .title {
     background-image:url(../images/chris_back02.jpg);
     background-position: right;
-    
+
     background-image: url(../images/chris_back01.jpg), url(../images/chris_back02.jpg);
     background-position: center left, center right;
     background-repeat: no-repeat, no-repeat;
@@ -616,8 +617,11 @@ padding: 32px;
     box-sizing: border-box;
     background-size: 40%;
 }
-.title p {    font-size: 30px;
-    margin-bottom: -20px;}
+.title p {
+    font-size: 30px;
+}
+.title h1 {
+    text-shadow: 0px 0px 6px black;}
 
 /* a partir de aqui el CSS de las animaciones */
 
@@ -789,6 +793,7 @@ animation-play-state: paused;
 
 #features {
     background: white;
+    padding-bottom: 20px;
 }
 #features h1 {
     font-size: 80px;
@@ -847,52 +852,6 @@ animation-play-state: paused;
 }
 
 
-  /* Some corrections for small devices */
-@media only screen and (max-width: 700px){ 
-    h1 {
-        font-size:130px;
-        margin-top: -30px;
-    }
-	#s1 figure {
-		width: 90%;
-	}
-    #s2 figure img {
-        margin: 0px 10px;
-    }
-    
-	#s1 div {
-		width: 90%;
-		display: inline-block;
-		margin-top: 110px;
-	}
-	#s2 ul {
-		flex-direction: column;
-	}
-	#s2 ul li {
-		width: 95%;
-		margin-bottom: 20px;
-	}	
-	#s2::before {
-		width: 92%;
-		height: 98%;
-	}
-	#s3 div {
-		width: 70%;
-		margin-top: 10px;
-	}
-	#s3 div button {
-		margin: 20px 0px 0px 0px;
-		padding: 17px 27px;
-	}
-    #s4 {
-		flex-direction: column;
-	}
-	#s4 form, .formText  {
-		width: 95%;
-		margin-bottom: 20px;
-	}
-
-}
 
 /* S L I D E R */
 #container-slider
@@ -906,7 +865,8 @@ animation-play-state: paused;
     position: relative;
     display: block;
     width: 100%;
-    min-height: 500px;
+    min-height: 35vw;
+    margin-top: 0px;
 }
 #slider li {
     background-repeat: no-repeat;
@@ -925,6 +885,7 @@ animation-play-state: paused;
     transition: opacity 1s;
     z-index: -1;
     opacity: 0;
+    min-height: 35vw;
     
 }
 #container-slider .arrowPrev, #container-slider .arrowNext{
@@ -975,6 +936,7 @@ animation-play-state: paused;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 18px;
+    line-height: 18px;
 }
 .content_slider figure p {
     color: gray;
@@ -986,19 +948,16 @@ animation-play-state: paused;
 }
 .btnSlider{
     color: #FFF;
-    font-size: 15pt;
-    font-family: 'arial';
-    letter-spacing: 1px;
-    padding: 10px 50px;
-    border: 1px solid #CCC;
-    background: rgba(37, 40, 80, 0.55);
-    border-radius: 31px;
+    font-size: 15px;
+    padding: 5px 10px;
+    background: rgb(225 185 137);
+    border-radius: 3px;
     text-decoration: none;
     transition: .5s all;
+    margin-top: 5px;
 }
 .btnSlider:hover{
-    background: #111;
-    border: 1px solid #111;
+    background: #302f2f;
 }
 .listslider {
     position: absolute;
@@ -1048,8 +1007,62 @@ animation-play-state: paused;
 }
 #slider figure img {width: 70%; margin-bottom: -15px;}
 
-@media screen and (max-width: 460px){
-	.content_slider h2 {
+  /* Some corrections for small devices */
+  @media only screen and (max-width: 700px){ 
+    h1 {
+        font-size:100px;
+        margin-top: -30px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    #s22 h2 {font-size: 55px; text-align: center;}
+	#s1 figure {
+		width: 90%;
+	}
+    #s2 figure img {
+        margin: 0px 10px;
+    }
+    .title {padding:1%}
+    
+	#s1 div {
+		width: 90%;
+		display: inline-block;
+		margin-top: 110px;
+	}
+	#s2 ul {
+		flex-direction: column;
+	}
+	#s2 ul li {
+		width: 95%;
+		margin-bottom: 20px;
+	}	
+	#s2::before {
+		width: 92%;
+		height: 98%;
+	}
+	#s3 div {
+		width: 70%;
+		margin-top: 10px;
+	}
+	#s3 div button {
+		margin: 20px 0px 0px 0px;
+		padding: 17px 27px;
+	}
+    #s4 {
+		flex-direction: column;
+	}
+	#s4 form, .formText  {
+		width: 95%;
+		margin-bottom: 20px;
+	}
+    #features h1 {
+        font-size: 66px;
+        line-height: 66px;
+        margin-left: 20px;
+    }
+    /* S L I D E R */
+    .content_slider h2 {
 	    font-size: 15pt !important;
 	}
 	.content_slider p {
@@ -1065,14 +1078,12 @@ animation-play-state: paused;
 		right: 15px !important;
 	}
 	#slider{
-		height: 400px;
-		min-height: 400px;
+		min-height: 40vw;
 	}
 	#slider li .content_slider{
 		padding: 10px 35px;
 	}
 	.btnSlider{
-		padding: 10px 30px;
     	font-size: 10pt;
 	}
 
