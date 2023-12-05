@@ -602,6 +602,19 @@ max-width: 1000px;
 margin: 0 auto;
 padding: 32px;
 }
+.title {
+    background-image: url(../images/chris_back01.jpg), url(../images/chris_back02.jpg);
+    background-position: center left, center right;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #0d1015;
+    background-attachment: fixed;
+    max-width: 100%;
+    padding: 1% 20%;
+    box-sizing: border-box;
+    background-size: 40%;
+}
+.title p {    font-size: 30px;
+    margin-bottom: -20px;}
 
 /* a partir de aqui el CSS de las animaciones */
 
