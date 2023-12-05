@@ -603,6 +603,9 @@ margin: 0 auto;
 padding: 32px;
 }
 .title {
+    background-image:url(../images/chris_back02.jpg);
+    background-position: right;
+    
     background-image: url(../images/chris_back01.jpg), url(../images/chris_back02.jpg);
     background-position: center left, center right;
     background-repeat: no-repeat, no-repeat;
