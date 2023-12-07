@@ -51,17 +51,6 @@ header.innerHTML = `
 			        </div>
 			      </nav>
           </div>
-          <div class="home_content1">
-            <div>
-              <h2>Style and Elegance</h2>
-              <h1>Arvies</h1>
-              <p>
-                Everything you need to look sophisticated and modern. An
-                unforgettable gift. The perfect combination of memories and
-                perfection
-              </p>
-              <a href="#" class="readMore">READ MORE</a>
-            </div>
-          </div>
+          
         </section>
         `;
