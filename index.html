@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS - Arvies Watches</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,8 +13,9 @@
     <link href="css/style.css" rel="stylesheet" />
     <script src="./js/jquery-latest.js"></script>
     <script src="./js/main.js"></script>
+    
     <link rel="shortcut icon" href="images/Favicon.svg" type="image/x-icon" />
-    <script>
+    <!-- <script>
       // esta funcion comprueba si un elemento esta visible en pantalla
       function isVisible(elm) {
         var rect = elm.getBoundingClientRect();
@@ -37,52 +38,11 @@
           });
         });
       });
-    </script>
+    </script> -->
   </head>
   <body>
     <div id="container">
-      <header class="home">
-        <section class="parallax-bg">
-          <div class="contenedor">
-            <nav class="menu">
-              <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about-us.html">About us</a></li>
-                <li><a href="./index.html"><img src="./images/logoArvies.svg" alt="Logo Arvies"/></a></li>
-                <li><a href="./contact-us.html">Contact Us</a></li>
-				        <li><a href="./product.html">Our Products</a></li>
-              </ul>
-            </nav>
-			      <nav class="menu_mobile" role="navigation">
-				      <img src="./images/logoArvies.svg">
-				      <div id="menuToggle">
-				        <input type="checkbox" />
-					      <span></span>
-					      <span></span>
-					      <span></span>
-				        <ul id="menu">
-                  <li><a href="./index.html">Home</a></li>
-                  <li><a href="./about-us.html">About us</a></li>
-                  <li><a href="./contact-us.html">Contact Us</a></li>
-                  <li><a href="./product.html">Our Products</a></li>
-				        </ul>
-			        </div>
-			      </nav>
-          </div>
-          <div class="home_content1">
-            <div>
-              <h2>Style and Elegance</h2>
-              <h1>Arvies</h1>
-              <p>
-                Everything you need to look sophisticated and modern. An
-                unforgettable gift. The perfect combination of memories and
-                perfection
-              </p>
-              <a href="#" class="readMore">READ MORE</a>
-            </div>
-          </div>
-        </section>
-      </header>
+      <header class="home" id="header"></header>
 
       <main>
         <section id="hero" class="paused">
@@ -149,7 +109,7 @@
               <h1 class="anim-left">Incomparable...</h1>
               <p class="anim-right">New arrivals</p>
               <ul>
-                <li class="anim-fade-in anim-pause-2" id="sports-outdoor" >
+                <li class="anim-fade-in anim-pause-2" id="sports-outdoor">
                   <figure>
                     <img src="./images/Sports.jpg" alt="Sports and Outdoor" />
                   </figure>
@@ -165,13 +125,16 @@
                     <a href="#" class="readMore">READ MORE</a>
                   </div>
                 </li>
-                <li class="anim-fade-in anim-pause-2 reverse" id="business-executive">
-					<figure>
-						<img
-						  src="./images/Executive.jpg"
-						  alt="Business Executive"
-						/>
-					  </figure>
+                <li
+                  class="anim-fade-in anim-pause-2 reverse"
+                  id="business-executive"
+                >
+                  <figure>
+                    <img
+                      src="./images/Executive.jpg"
+                      alt="Business Executive"
+                    />
+                  </figure>
                   <div class="text">
                     <h3>Business Executive</h3>
                     <p>
@@ -183,7 +146,6 @@
                     </p>
                     <a href="#" class="readMore">READ MORE</a>
                   </div>
-                 
                 </li>
                 <li class="anim-fade-in anim-pause-2" id="classic-Elegance">
                   <figure>
@@ -206,8 +168,8 @@
           </section>
           <section class="paused">
             <div class="wrapper title">
-				<p class="anim-up">Featuring for</p>
-              <h1 class="anim-down">  Christmas...</h1>
+              <p class="anim-up">Featuring for</p>
+              <h1 class="anim-down">Christmas...</h1>
             </div>
           </section>
 
@@ -235,7 +197,7 @@
                     <figure>
                       <img src="./images/Slider/Slider1.jpg" />
                       <figcaption>Classic Elegance</figcaption>
-					  <a href="./product.html#1" class="btnSlider">READ MORE</a>
+                      <a href="./product.html#1" class="btnSlider">READ MORE</a>
                     </figure>
                     <figure>
                       <img src="./images/Slider/Slider2.jpg" />
@@ -271,17 +233,16 @@
                   </div>
                 </div>
               </li>
-              
             </ul>
           </section>
           <!-- end slideshow container -->
         </section>
       </main>
       <!-- Footer -->
-      <footer id="footer">
-      </footer>
+      <footer id="footer"></footer>
     </div>
     <script src="js/gallery.js"></script>
-    <script src="js/components/footer.js"></script>
+    <script src="./js/components/Header.js"></script>
+    <script src="js/components/Footer.js"></script>
   </body>
 </html>
