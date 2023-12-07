@@ -23,10 +23,10 @@ footer.innerHTML = `
 
 <nav id="social">
   <ul>
-    <li><a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
-    <li><a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
-    <li><a href="#" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
-    <li><a href="#" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
+    <li><a href="#" target="_blank"><img src="../../images/instagram.svg" alt="instagram"/></a></li>
+    <li><a href="#" target="_blank"><img src="../../images/whatsapp.svg" alt="whatsapp"/></a></li>
+    <li><a href="#" target="_blank"><img src="../../images/facebook.svg" alt="facebook"/></a></li>
+    <li><a href="#" target="_blank"><img src="../../images/tik-tok.svg" alt="tik-tok"/></a></li>
   </ul>
 </nav>
 
