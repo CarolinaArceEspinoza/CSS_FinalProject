@@ -123,19 +123,19 @@ function createWatchCard(watch) {
   const nameHeader = document.createElement("h2");
   nameHeader.textContent = watch.name;
 
-  const descriptionParagraph = document.createElement("p");
-  descriptionParagraph.textContent = watch.description;
-
   const priceParagraph = document.createElement("p");
   priceParagraph.textContent = `Price: $${watch.price.toFixed(2)}`;
 
-  // Add more details or styles as needed
+  const addToCart = document.createElement("a");
+  addToCart.className = "readMore";
+  addToCart.textContent = "Add to Cart";
+  addToCart.href = `./product.html#${watch.id}`;
 
   // Append elements to the card
   cardDiv.appendChild(img);
   cardDiv.appendChild(nameHeader);
-  cardDiv.appendChild(descriptionParagraph);
   cardDiv.appendChild(priceParagraph);
+  cardDiv.appendChild(addToCart);
 
   return cardDiv;
 }
