@@ -48,15 +48,26 @@
               <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about-us.html">About us</a></li>
-                <li>
-                  <a href="./index.html"
-                    ><img src="./images/logoArvies.svg" alt="Logo Arvies"
-                  /></a>
-                </li>
-                <!-- <li><a href="#">Trabajos</a></li> -->
+                <li><a href="./index.html"><img src="./images/logoArvies.svg" alt="Logo Arvies"/></a></li>
                 <li><a href="./contact-us.html">Contact Us</a></li>
+				        <li><a href="./product.html">Our Products</a></li>
               </ul>
             </nav>
+			      <nav class="menu_mobile" role="navigation">
+				      <img src="./images/logoArvies.svg">
+				      <div id="menuToggle">
+				        <input type="checkbox" />
+					      <span></span>
+					      <span></span>
+					      <span></span>
+				        <ul id="menu">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./about-us.html">About us</a></li>
+                  <li><a href="./contact-us.html">Contact Us</a></li>
+                  <li><a href="./product.html">Our Products</a></li>
+				        </ul>
+			        </div>
+			      </nav>
           </div>
           <div class="home_content1">
             <div>
@@ -154,7 +165,13 @@
                     <a href="#" class="readMore">READ MORE</a>
                   </div>
                 </li>
-                <li class="anim-fade-in anim-pause-2" id="business-executive">
+                <li class="anim-fade-in anim-pause-2 reverse" id="business-executive">
+					<figure>
+						<img
+						  src="./images/Executive.jpg"
+						  alt="Business Executive"
+						/>
+					  </figure>
                   <div class="text">
                     <h3>Business Executive</h3>
                     <p>
@@ -166,12 +183,7 @@
                     </p>
                     <a href="#" class="readMore">READ MORE</a>
                   </div>
-                  <figure>
-                    <img
-                      src="./images/Executive.jpg"
-                      alt="Business Executive"
-                    />
-                  </figure>
+                 
                 </li>
                 <li class="anim-fade-in anim-pause-2" id="classic-Elegance">
                   <figure>
@@ -252,7 +264,7 @@
                       <a href="#" class="btnSlider">READ MORE</a>
                     </figure>
                     <figure>
-                      <img src="./images/Slider/Slider1.jpg" />
+                      <img src="./images/Slider/Slider6.jpg" />
                       <figcaption>Nombre del Reloj</figcaption>
                       <a href="#" class="btnSlider">READ MORE</a>
                     </figure>
@@ -268,79 +280,40 @@
       <!-- Footer -->
       <footer id="footer">
         <h2>Be part of our community</h2>
-        <!-- Social networks with some buttons disabled -->
-        <!-- Style links in the footer to change color when hovered over. -->
-
         <section id="s4">
           <div class="formText">
-            <p><span>let's join our newsletter.</span></p>
+            <p><span>Let's join our newsletter.</span></p>
             <p>
               Stay ahead of the fashion curve and elevate your every moment with
               our exclusive designs, the epitome of elegance and style in our
-              latest newsletter. Sign up now to be the first to explore the
-              latest trends and receive exclusive offers.
+              latest newsletter.
             </p>
           </div>
-          <form id="contact_info">
-            <!-- <div>
-							<input type="text" name="user" id="user" required size="25" maxlength="50" placeholder="User Name">
-						</div> -->
-            <div>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                required
-                size="25"
-                maxlength="50"
-                placeholder="E-Mail"
-              />
 
-              <button
-                class="readMore"
-                style="background: black"
-                onclick="return alert('Form submitted successfully!'); return false;"
-              >
-                Join us!
-              </button>
+          <form id="contact_info">
+          <div>
+				    <div class="text"> Sign up now to be the first to explore the latest trends and receive exclusive offers.</div>
+              <input type="text" name="email" id="email" required size="25" maxlength="50" placeholder="E-Mail" />
+              <button class="readMore" style="background: #2b2a2a" onclick="return alert('Form submitted successfully!'); return false;" >Join us!</button>
             </div>
-            <!-- <div> 
-							<input type="password" name="password" id="password" required size="25" maxlength="50" placeholder="Password">
-						</div> -->
           </form>
         </section>
+        
         <nav id="social">
           <ul>
-            <li>
-              <a href="#" target="_blank"
-                ><img src="images/instagram.svg" alt="instagram"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank"
-                ><img src="images/whatsapp.svg" alt="whatsapp"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank"
-                ><img src="images/facebook.svg" alt="facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank"
-                ><img src="images/tik-tok.svg" alt="tik-tok"
-              /></a>
-            </li>
+            <li><a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
+            <li><a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
+            <li><a href="#" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
+            <li><a href="#" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
           </ul>
         </nav>
 
-        <!-- Style links in the footer to change color when hovered over. With an underline.-->
         <nav id="links">
           <ul>
             <li style="color: #a5834c; border: 0px">References:</li>
-            <li><a href="#" target="_blank">Website</a></li>
-            <li><a href="#" target="_blank">Archives</a></li>
-            <li><a href="#" target="_blank">Images from Freepik</a></li>
+            <li><a href="https://pixabay.com/" target="_blank">Images Pixabay</a></li>
+            <li><a href="https://www.freepik.com/" target="_blank">Images Freepik</a></li>
+            <li><a href="https://www.michaelkors.com/ca/en/men/watches/" target="_blank">Watches Examples</a></li>
           </ul>
         </nav>
       </footer>
