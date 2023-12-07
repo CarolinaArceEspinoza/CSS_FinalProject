@@ -32,7 +32,7 @@ header.innerHTML = `
                 <li><a href="./about-us.html">About us</a></li>
                 <li><a href="./index.html"><img src="./images/logoArvies.svg" alt="Logo Arvies"/></a></li>
                 <li><a href="./contact-us.html">Contact Us</a></li>
-				        <li><a href="./product.html">Our Products</a></li>
+				        <li><a href="./catalog.html">Our Products</a></li>
               </ul>
             </nav>
 			      <nav class="menu_mobile" role="navigation">

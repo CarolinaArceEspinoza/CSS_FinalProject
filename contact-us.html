@@ -14,28 +14,10 @@
     <script src="./js/jquery-latest.js"></script>
     <script src="./js/main.js"></script>
     <link rel="shortcut icon" href="images/Fabicon.svg" type="image/x-icon" />
-    <script>
-      function isVisible(elm) {
-        var rect = elm.getBoundingClientRect();
-        var viewHeight = Math.max(
-          document.documentElement.clientHeight,
-          window.innerHeight
-        );
-        return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-      }
-      window.addEventListener("DOMContentLoaded", (ev0) => {
-        window.addEventListener("scroll", (ev1) => {
-          document.querySelectorAll(".paused").forEach((elm) => {
-            if (isVisible(elm)) elm.classList.remove("paused");
-          });
-        });
-      });
-    </script>
   </head>
   <body>
     <div id="container">
-      <header class="home" id="header">
-      </header>
+      <header class="home" id="header"></header>
 
       <main>
         <section id="contactoInt">
@@ -92,8 +74,7 @@
         </section>
       </main>
       <!-- Footer -->
-      <footer id="footer">
-      </footer>
+      <footer id="footer"></footer>
     </div>
     <script src="js/gallery.js"></script>
     <script src="./js/components/Header.js"></script>

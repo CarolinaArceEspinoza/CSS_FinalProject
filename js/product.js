@@ -96,7 +96,46 @@ function displayProductInfo(product) {
     }" style="max-width: 300px;">
             `;
   } else {
-
     productInfoDiv.innerHTML = "<p>Product not found</p>";
   }
+}
+
+// Load Catalog
+
+document.addEventListener("DOMContentLoaded", function () {
+  const watchCatalogSection = document.getElementById("watch-catalog");
+
+  // Loop through the watches array and create a card for each watch
+  watches.forEach((watch) => {
+    const watchCard = createWatchCard(watch);
+    watchCatalogSection.appendChild(watchCard);
+  });
+});
+
+function createWatchCard(watch) {
+  const cardDiv = document.createElement("div");
+  cardDiv.className = "watch-card";
+
+  const img = document.createElement("img");
+  img.src = watch.image;
+  img.alt = watch.name;
+
+  const nameHeader = document.createElement("h2");
+  nameHeader.textContent = watch.name;
+
+  const descriptionParagraph = document.createElement("p");
+  descriptionParagraph.textContent = watch.description;
+
+  const priceParagraph = document.createElement("p");
+  priceParagraph.textContent = `Price: $${watch.price.toFixed(2)}`;
+
+  // Add more details or styles as needed
+
+  // Append elements to the card
+  cardDiv.appendChild(img);
+  cardDiv.appendChild(nameHeader);
+  cardDiv.appendChild(descriptionParagraph);
+  cardDiv.appendChild(priceParagraph);
+
+  return cardDiv;
 }
