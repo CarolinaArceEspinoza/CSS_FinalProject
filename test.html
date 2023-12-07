@@ -1,0 +1,54 @@
+<!-- product.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        /* Add your styling here */
+    </style>
+</head>
+<body>
+    <div id="product-info">
+        <!-- Product information will be displayed here -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the product ID from the URL
+            const productId = window.location.hash.substring(1);
+
+            // Fetch the product information based on the ID
+            const product = getProductById(productId);
+
+            // Display the product information on the page
+            displayProductInfo(product);
+        });
+
+        // Replace this function with your actual logic to fetch the product by ID
+        function getProductById(productId) {
+            // Assume watches array is available (you can import it if needed)
+            return watches.find(product => product.id === parseInt(productId));
+        }
+
+        function displayProductInfo(product) {
+            const productInfoDiv = document.getElementById("product-info");
+
+            if (product) {
+                // Display product information
+                productInfoDiv.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price.toFixed(2)}</p>
+                    <img src="${product.image}" alt="${product.name}" style="max-width: 300px;">
+                `;
+            } else {
+                // Product not found
+                productInfoDiv.innerHTML = "<p>Product not found</p>";
+            }
+        }
+    </script>
+</body>
+</html>
