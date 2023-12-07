@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>CSS - Arvies Watches</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,13 +40,17 @@
             <ul>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./about-us.html">About us</a></li>
-              <li><a href="./index.html"><img src="./images/logoArvies.svg" alt="Logo Arvies"/></a></li>
+              <li>
+                <a href="./index.html"
+                  ><img src="./images/logoArvies.svg" alt="Logo Arvies"
+                /></a>
+              </li>
               <li><a href="./contact-us.html">Contact Us</a></li>
               <li><a href="./product.html">Our Products</a></li>
             </ul>
           </nav>
           <nav class="menu_mobile" role="navigation">
-            <img src="./images/logoArvies.svg">
+            <img src="./images/logoArvies.svg" />
             <div id="menuToggle">
               <input type="checkbox" />
               <span></span>
@@ -64,91 +68,64 @@
       </header>
 
       <main>
-          <section id="contactoInt">
-            <div>
-              <h2>Contact Us</h2>
-              <p>
-                Welcome to Arvies Watches! Your time is our priority, and we're
-                here to assist you every step of the way. Should you have any
-                questions, concerns, or simply want to share your feedback,
-                don't hesitate to reach out. Our dedicated team is committed to
-                ensuring you have an exceptional shopping experience.
-              </p>
-              <form action="contact-us.html">
-                
-                <input type="text" id="name" name="name" placeholder="Name" required />
-
-                
-                <input type="email" id="email" name="email" placeholder="E-mail" required />
-
-                
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Your Message" 
-                  required
-                ></textarea>
-
-                <input
-                  class="readMore"
-                  type="submit"
-                  name="submit"
-                  value="Submit"
-                  style="background: #2b2a2a"
-                  onclick="return alert('Form submitted successfully!'); return false;"
-                />
-              </form>
-
-              <script>
-                function submitForm() {
-                  alert("Form submitted successfully!");
-                }
-              </script>
-            </div>
-          </section>
-      </main>
-       <!-- Footer -->
-       <footer id="footer">
-        <h2>Be part of our community</h2>
-        <section id="s4">
-          <div class="formText">
-            <p><span>Let's join our newsletter.</span></p>
-            <p>
-              Stay ahead of the fashion curve and elevate your every moment with
-              our exclusive designs, the epitome of elegance and style in our
-              latest newsletter.
-            </p>
-          </div>
-
-          <form id="contact_info">
+        <section id="contactoInt">
           <div>
-				    <div class="text"> Sign up now to be the first to explore the latest trends and receive exclusive offers.</div>
-              <input type="text" name="email" id="email" required size="25" maxlength="50" placeholder="E-Mail" />
-              <button class="readMore" style="background: #2b2a2a" onclick="return alert('Form submitted successfully!'); return false;" >Join us!</button>
-            </div>
-          </form>
-        </section>
-        
-        <nav id="social">
-          <ul>
-            <li><a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
-            <li><a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
-            <li><a href="#" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
-            <li><a href="#" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
-          </ul>
-        </nav>
+            <h2>Contact Us</h2>
+            <p>
+              Welcome to Arvies Watches! Your time is our priority, and we're
+              here to assist you every step of the way. Should you have any
+              questions, concerns, or simply want to share your feedback, don't
+              hesitate to reach out. Our dedicated team is committed to ensuring
+              you have an exceptional shopping experience.
+            </p>
+            <form action="contact-us.html">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
 
-        <nav id="links">
-          <ul>
-            <li style="color: #a5834c; border: 0px">References:</li>
-            <li><a href="https://pixabay.com/" target="_blank">Images Pixabay</a></li>
-            <li><a href="https://www.freepik.com/" target="_blank">Images Freepik</a></li>
-            <li><a href="https://www.michaelkors.com/ca/en/men/watches/" target="_blank">Watches Examples</a></li>
-          </ul>
-        </nav>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+              ></textarea>
+
+              <input
+                class="readMore"
+                type="submit"
+                name="submit"
+                value="Submit"
+                style="background: #2b2a2a"
+                onclick="return alert('Form submitted successfully!'); return false;"
+              />
+            </form>
+
+            <script>
+              function submitForm() {
+                alert("Form submitted successfully!");
+              }
+            </script>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer id="footer">
       </footer>
     </div>
     <script src="js/gallery.js"></script>
+    <script src="js/components/footer.js"></script>
   </body>
 </html>

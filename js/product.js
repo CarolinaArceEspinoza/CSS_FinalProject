@@ -71,23 +71,15 @@ const watches = [
     price: 189.99,
     image: "vintage_explorer.jpg",
   },
-  // Add more watches as needed
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the product ID from the URL
   const productId = window.location.hash.substring(1);
-
-  // Fetch the product information based on the ID
   const product = getProductById(productId);
-
-  // Display the product information on the page
   displayProductInfo(product);
 });
 
-// Replace this function with your actual logic to fetch the product by ID
 function getProductById(productId) {
-  // Assume watches array is available (you can import it if needed)
   return watches.find((product) => product.id === parseInt(productId));
 }
 
@@ -95,7 +87,6 @@ function displayProductInfo(product) {
   const productInfoDiv = document.getElementById("product-info");
 
   if (product) {
-    // Display product information
     productInfoDiv.innerHTML = `
                 <h2>${product.name}</h2>
                 <h4><span>$</span>${product.price.toFixed(2)}</h4>
@@ -105,21 +96,7 @@ function displayProductInfo(product) {
     }" style="max-width: 300px;">
             `;
   } else {
-    // Product not found
+
     productInfoDiv.innerHTML = "<p>Product not found</p>";
   }
-  // if (product) {
-  //   // Display product information
-  //   productInfoDiv.innerHTML = `
-  //             <h2>${product.name}</h2>
-  //             <h4><span>$</span>${product.price.toFixed(2)}</h4>
-  //             <p>${product.description}</p>
-  //             <img src="${product.image}" alt="${
-  //     product.name
-  //   }" style="max-width: 300px;">
-  //         `;
-  // } else {
-  //   // Product not found
-  //   productInfoDiv.innerHTML = "<p>Product not found</p>";
-  // }
 }
