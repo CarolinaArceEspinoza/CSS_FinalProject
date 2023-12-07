@@ -13,7 +13,9 @@
     <link href="css/style.css" rel="stylesheet" />
     <script src="./js/jquery-latest.js"></script>
     <script src="./js/main.js"></script>
-    <link rel="shortcut icon" href="images/Fabicon.svg" type="image/x-icon" />
+    <script src="./js/product.js"></script>
+    
+    <link rel="shortcut icon" href="images/Favicon.svg" type="image/x-icon" />
     <script>
       // esta funcion comprueba si un elemento esta visible en pantalla
       function isVisible(elm) {
@@ -38,67 +40,7 @@
         });
       });
 
-      const watches = [
-        {
-          id: 1,
-          name: "Classic Elegance",
-          description:
-            "A timeless watch with a classic design, perfect for any occasion.",
-          price: 199.99,
-          image: "./images/Slider/Slider1.jpg",
-        },
-        {
-          id: 2,
-          name: "Sporty Chronograph",
-          description:
-            "For the active individual, this sporty chronograph combines style and functionality.",
-          price: 249.99,
-          image: "./images/Slider/Slider4.jpg",
-        },
-        {
-          id: 3,
-          name: "Modern Minimalism",
-          description:
-            "Embrace simplicity with this modern minimalist watch, a statement of contemporary style.",
-          price: 159.99,
-          image: "modern_minimalism.jpg",
-        },
-      ];
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get the product ID from the URL
-        const productId = window.location.hash.substring(1);
 
-        // Fetch the product information based on the ID
-        const product = getProductById(productId);
-
-        // Display the product information on the page
-        displayProductInfo(product);
-      });
-
-      // Replace this function with your actual logic to fetch the product by ID
-      function getProductById(productId) {
-        // Assume watches array is available (you can import it if needed)
-        return watches.find((product) => product.id === parseInt(productId));
-      }
-
-      function displayProductInfo(product) {
-        const productInfoDiv = document.getElementById("product-info");
-
-        if (product) {
-          // Display product information
-          productInfoDiv.innerHTML = `
-                    <h2>${product.name}</h2>
-                    <h4><span>$</span>${product.price.toFixed(2)}</h4>
-                    <p>${product.description}</p>                    
-                    <img src="${product.image}" alt="${
-            product.name
-          }" style="max-width: 300px;">
-                `;
-        } else {
-          // Product not found
-          productInfoDiv.innerHTML = "<p>Product not found</p>";
-        }
-      }
     </script>
   </head>
   <body>
@@ -162,7 +104,7 @@
         </section>
 
         <!-- Slideshow container -->
-        <section id="container-slider">
+        <!-- <section id="container-slider">
           <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"
             >&#10094;</a
           >
@@ -220,7 +162,7 @@
               </div>
             </li>
           </ul>
-        </section>
+        </section> -->
         <!-- end slideshow container -->
       </main>
       <!-- Footer -->
