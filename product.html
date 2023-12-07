@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>CSS - Arvies Watches</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,6 +37,68 @@
           });
         });
       });
+
+      const watches = [
+        {
+          id: 1,
+          name: "Classic Elegance",
+          description:
+            "A timeless watch with a classic design, perfect for any occasion.",
+          price: 199.99,
+          image: "./images/Slider/Slider1.jpg",
+        },
+        {
+          id: 2,
+          name: "Sporty Chronograph",
+          description:
+            "For the active individual, this sporty chronograph combines style and functionality.",
+          price: 249.99,
+          image: "./images/Slider/Slider4.jpg",
+        },
+        {
+          id: 3,
+          name: "Modern Minimalism",
+          description:
+            "Embrace simplicity with this modern minimalist watch, a statement of contemporary style.",
+          price: 159.99,
+          image: "modern_minimalism.jpg",
+        },
+      ];
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the product ID from the URL
+        const productId = window.location.hash.substring(1);
+
+        // Fetch the product information based on the ID
+        const product = getProductById(productId);
+
+        // Display the product information on the page
+        displayProductInfo(product);
+      });
+
+      // Replace this function with your actual logic to fetch the product by ID
+      function getProductById(productId) {
+        // Assume watches array is available (you can import it if needed)
+        return watches.find((product) => product.id === parseInt(productId));
+      }
+
+      function displayProductInfo(product) {
+        const productInfoDiv = document.getElementById("product-info");
+
+        if (product) {
+          // Display product information
+          productInfoDiv.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <h4><span>$</span>${product.price.toFixed(2)}</h4>
+                    <p>${product.description}</p>                    
+                    <img src="${product.image}" alt="${
+            product.name
+          }" style="max-width: 300px;">
+                `;
+        } else {
+          // Product not found
+          productInfoDiv.innerHTML = "<p>Product not found</p>";
+        }
+      }
     </script>
   </head>
   <body>
@@ -47,13 +109,17 @@
             <ul>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./about-us.html">About us</a></li>
-              <li><a href="./index.html"><img src="./images/logoArvies.svg" alt="Logo Arvies"/></a></li>
+              <li>
+                <a href="./index.html"
+                  ><img src="./images/logoArvies.svg" alt="Logo Arvies"
+                /></a>
+              </li>
               <li><a href="./contact-us.html">Contact Us</a></li>
               <li><a href="./product.html">Our Products</a></li>
             </ul>
           </nav>
           <nav class="menu_mobile" role="navigation">
-            <img src="./images/logoArvies.svg">
+            <img src="./images/logoArvies.svg" />
             <div id="menuToggle">
               <input type="checkbox" />
               <span></span>
@@ -71,91 +137,91 @@
       </header>
 
       <main>
-          <section class="productsPage">
-              <ul class="list_int">
-                <li>
-                <figure><img src="./images/Slider/Slider1.jpg"></figure>
-                <div class="text">
-                  <h2>Name of the product</h2>
-                  <h4><span>$</span>1,245</h4>
-                  <p>
-                    Descripción del producto Arvies was born out of a passion for horology and a desire to
-                    redefine the way we perceive timepieces. Established in 1986, we
-                    set out on a journey to curate a collection of watches that
-                    seamlessly blend timeless design with contemporary flair. Each
-                    Arvies timepiece is a testament to precision engineering and a
-                    commitment to quality.
-                  </p>
-                  <button class="readMore" onclick="" >Add to Wishlist <span>&#9829;</span></button>
+        <section class="productsPage">
+          <ul class="list_int">
+            <li>
+              <!-- <figure><img src="./images/Slider/Slider1.jpg" /></figure> -->
+              <div class="text" id="product-info">
+                <!-- <h2>Name of the product</h2>
+                <h4><span>$</span>1,245</h4>
+                <p>
+                  Descripción del producto Arvies was born out of a passion for
+                  horology and a desire to redefine the way we perceive
+                  timepieces. Established in 1986, we set out on a journey to
+                  curate a collection of watches that seamlessly blend timeless
+                  design with contemporary flair. Each Arvies timepiece is a
+                  testament to precision engineering and a commitment to
+                  quality.
+                </p> -->
+                <button class="readMore" onclick="">
+                  Add to Wishlist <span>&#9829;</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slideshow container -->
+        <section id="container-slider">
+          <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"
+            >&#10094;</a
+          >
+          <a href="javascript: funcionEjecutar('siguiente');" class="arrowNext"
+            >&#10095;</a
+          >
+          <ul class="listslider" style="display: none">
+            <li>
+              <a itlist="itList_0" href="#" class="item-select-slid"></a>
+            </li>
+            <li><a itlist="itList_1" href="#"></a></li>
+            <li><a itlist="itList_2" href="#"></a></li>
+          </ul>
+          <ul id="slider">
+            <li style="z-index: 0; opacity: 1">
+              <div class="content_slider">
+                <div>
+                  <figure>
+                    <img src="./images/Slider/Slider1.jpg" />
+                    <figcaption>Nombre del Reloj</figcaption>
+                    <a href="#" class="btnSlider">READ MORE</a>
+                  </figure>
+                  <figure>
+                    <img src="./images/Slider/Slider2.jpg" />
+                    <figcaption>Nombre del Reloj</figcaption>
+                    <a href="#" class="btnSlider">READ MORE</a>
+                  </figure>
+                  <figure>
+                    <img src="./images/Slider/Slider3.jpg" />
+                    <figcaption>Nombre del Reloj</figcaption>
+                    <a href="#" class="btnSlider">READ MORE</a>
+                  </figure>
                 </div>
-                </li>
-              </ul>
-          </section>
-          
-          <!-- Slideshow container -->
-          <section id="container-slider">
-            <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"
-              >&#10094;</a
-            >
-            <a
-              href="javascript: funcionEjecutar('siguiente');"
-              class="arrowNext"
-              >&#10095;</a
-            >
-            <ul class="listslider" style="display: none">
-              <li>
-                <a itlist="itList_0" href="#" class="item-select-slid"></a>
-              </li>
-              <li><a itlist="itList_1" href="#"></a></li>
-              <li><a itlist="itList_2" href="#"></a></li>
-            </ul>
-            <ul id="slider">
-              <li style="z-index: 0; opacity: 1">
-                <div class="content_slider">
-                  <div>
-                    <figure>
-                      <img src="./images/Slider/Slider1.jpg" />
-                      <figcaption>Nombre del Reloj</figcaption>
-					  <a href="#" class="btnSlider">READ MORE</a>
-                    </figure>
-                    <figure>
-                      <img src="./images/Slider/Slider2.jpg" />
-                      <figcaption>Nombre del Reloj</figcaption>
-                      <a href="#" class="btnSlider">READ MORE</a>
-                    </figure>
-                    <figure>
-                      <img src="./images/Slider/Slider3.jpg" />
-                      <figcaption>Nombre del Reloj</figcaption>
-                      <a href="#" class="btnSlider">READ MORE</a>
-                    </figure>
-                  </div>
+              </div>
+            </li>
+            <li style="background-image: transparent">
+              <div class="content_slider">
+                <div>
+                  <figure>
+                    <img src="./images/Slider/Slider4.jpg" />
+                    <figcaption>Nombre del Reloj</figcaption>
+                    <a href="#" class="btnSlider">READ MORE</a>
+                  </figure>
+                  <figure>
+                    <img src="./images/Slider/Slider5.jpg" />
+                    <figcaption>Nombre del Reloj</figcaption>
+                    <a href="#" class="btnSlider">READ MORE</a>
+                  </figure>
+                  <figure>
+                    <img src="./images/Slider/Slider6.jpg" />
+                    <figcaption>Nombre del Reloj</figcaption>
+                    <a href="#" class="btnSlider">READ MORE</a>
+                  </figure>
                 </div>
-              </li>
-              <li style="background-image: transparent">
-                <div class="content_slider">
-                  <div>
-                    <figure>
-                      <img src="./images/Slider/Slider4.jpg" />
-                      <figcaption>Nombre del Reloj</figcaption>
-                      <a href="#" class="btnSlider">READ MORE</a>
-                    </figure>
-                    <figure>
-                      <img src="./images/Slider/Slider5.jpg" />
-                      <figcaption>Nombre del Reloj</figcaption>
-                      <a href="#" class="btnSlider">READ MORE</a>
-                    </figure>
-                    <figure>
-                      <img src="./images/Slider/Slider6.jpg" />
-                      <figcaption>Nombre del Reloj</figcaption>
-                      <a href="#" class="btnSlider">READ MORE</a>
-                    </figure>
-                  </div>
-                </div>
-              </li>
-              
-            </ul>
-          </section>
-          <!-- end slideshow container -->
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- end slideshow container -->
       </main>
       <!-- Footer -->
       <footer id="footer">
@@ -171,29 +237,74 @@
           </div>
 
           <form id="contact_info">
-          <div>
-				    <div class="text"> Sign up now to be the first to explore the latest trends and receive exclusive offers.</div>
-              <input type="text" name="email" id="email" required size="25" maxlength="50" placeholder="E-Mail" />
-              <button class="readMore" style="background: #2b2a2a" onclick="return alert('Form submitted successfully!'); return false;" >Join us!</button>
+            <div>
+              <div class="text">
+                Sign up now to be the first to explore the latest trends and
+                receive exclusive offers.
+              </div>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                required
+                size="25"
+                maxlength="50"
+                placeholder="E-Mail"
+              />
+              <button
+                class="readMore"
+                style="background: #2b2a2a"
+                onclick="return alert('Form submitted successfully!'); return false;"
+              >
+                Join us!
+              </button>
             </div>
           </form>
         </section>
-        
+
         <nav id="social">
           <ul>
-            <li><a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
-            <li><a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
-            <li><a href="#" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
-            <li><a href="#" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/whatsapp.svg" alt="whatsapp"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/facebook.svg" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="images/tik-tok.svg" alt="tik-tok"
+              /></a>
+            </li>
           </ul>
         </nav>
 
         <nav id="links">
           <ul>
             <li style="color: #a5834c; border: 0px">References:</li>
-            <li><a href="https://pixabay.com/" target="_blank">Images Pixabay</a></li>
-            <li><a href="https://www.freepik.com/" target="_blank">Images Freepik</a></li>
-            <li><a href="https://www.michaelkors.com/ca/en/men/watches/" target="_blank">Watches Examples</a></li>
+            <li>
+              <a href="https://pixabay.com/" target="_blank">Images Pixabay</a>
+            </li>
+            <li>
+              <a href="https://www.freepik.com/" target="_blank"
+                >Images Freepik</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.michaelkors.com/ca/en/men/watches/"
+                target="_blank"
+                >Watches Examples</a
+              >
+            </li>
           </ul>
         </nav>
       </footer>
