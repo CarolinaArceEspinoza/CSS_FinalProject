@@ -2,7 +2,7 @@ const footer = document.getElementById("footer");
 
 footer.innerHTML = `
 <h2>Be part of our community</h2>
-<section id="s4">
+<section id="newsletter">
   <div class="formText">
     <p><span>Let's join our newsletter.</span></p>
     <p>
@@ -14,7 +14,7 @@ footer.innerHTML = `
 
   <form id="contact_info">
   <div>
-            <div class="text"> Sign up now to be the first to explore the latest trends and receive exclusive offers.</div>
+      <div class="text"> Sign up now to be the first to explore the latest trends and receive exclusive offers.</div>
       <input type="text" name="email" id="email" required size="25" maxlength="50" placeholder="E-Mail" />
       <button class="readMore" style="background: #2b2a2a" onclick="return alert('Form submitted successfully!'); return false;" >Join us!</button>
     </div>
@@ -23,10 +23,10 @@ footer.innerHTML = `
 
 <nav id="social">
   <ul>
-    <li><a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
-    <li><a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
-    <li><a href="#" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
-    <li><a href="#" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
+    <li><a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
+    <li><a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
+    <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
+    <li><a href="https://www.tiktok.com/" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
   </ul>
 </nav>
 

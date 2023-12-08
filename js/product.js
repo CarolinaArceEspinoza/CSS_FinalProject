@@ -1,76 +1,78 @@
 const watches = [
   {
     id: 1,
-    name: "Classic Elegance",
+    name: "Delicatta Golden",
     description:
       "A timeless watch with a classic design, perfect for any occasion.",
     price: 199.99,
-    image: "../images/Slider/Slider1.jpg",
+    image: "../images/Slider/Classic1.jpg",
   },
   {
     id: 2,
-    name: "Sporty Chronograph",
+    name: "Modern Minimalism",
     description:
-      "For the active individual, this sporty chronograph combines style and functionality.",
+    "Embrace simplicity with this modern minimalist watch, a statement of contemporary style.",
     price: 249.99,
-    image: "../images/Slider/Slider2.jpg",
+    image: "./images/Slider/Executive1.jpg",
   },
   {
     id: 3,
-    name: "Modern Minimalism",
+    name: "Sporty Chronograph",
     description:
-      "Embrace simplicity with this modern minimalist watch, a statement of contemporary style.",
+      "For the active individual, this sporty chronograph combines style and functionality.",
     price: 159.99,
-    image: "../images/Slider/Slider3.jpg",
+    image: "./images/Slider/Sport1.jpg",
   },
   {
     id: 4,
-    name: "Dive Master",
+    name: "Black Aviator Classic",
     description:
-      "Explore the depths with the Dive Master, a water-resistant watch built for underwater adventures.",
+      "Take flight with the Black Aviator, inspired by the precision instruments of aviation.",
     price: 299.99,
-    image: "../images/Slider/Slider4.jpg",
+    image: "../images/Slider/Classic2.jpg",
   },
   {
     id: 5,
-    name: "Aviator Series",
+    name: "Vintage Executive",
     description:
-      "Take flight with the Aviator Series, inspired by the precision instruments of aviation.",
-    price: 219.99,
-    image: "../images/Slider/Slider5.jpg",
+      "Embrace the charm of the past with the Vintage Executive, a watch that captures the essence of bygone eras.",
+    price: 189.99,
+    image: "./images/Slider/Executive2.jpg",
   },
   {
     id: 6,
-    name: "City Explorer",
-    description:
-      "Navigate urban landscapes with the City Explorer, featuring a sleek design and multiple time zones.",
-    price: 179.99,
-    image: "../images/Slider/Slider6.jpg",
-  },
-  {
-    id: 7,
-    name: "Rose Gold Elegance",
-    description:
-      "Elevate your style with the Rose Gold Elegance, a sophisticated watch with a touch of luxury.",
-    price: 269.99,
-    image: "rose_gold_elegance.jpg",
-  },
-  {
-    id: 8,
     name: "Smart Tech Companion",
     description:
       "Stay connected with the Smart Tech Companion, a watch that seamlessly integrates with your devices.",
     price: 329.99,
-    image: "smart_tech_companion.jpg",
+    image: "./images/Slider/Sport2.jpg",
+  },
+  {
+    id: 7,
+    name: "Gold Elegance",
+    description:
+      "Elevate your style with the Gold Elegance, a sophisticated watch with a touch of luxury.",
+    price: 269.99,
+    image: "../images/Slider/Classic3.jpg",
+  },
+  {
+    id: 8,
+    name: "City Explorer",
+    description:
+      "Navigate urban landscapes with the City Explorer, featuring a sleek design and multiple time zones.",
+    price: 179.99,
+    image: "./images/Slider/Executive3.jpg",
   },
   {
     id: 9,
-    name: "Vintage Explorer",
+    name: "Dive Master",
     description:
-      "Embrace the charm of the past with the Vintage Explorer, a watch that captures the essence of bygone eras.",
-    price: 189.99,
-    image: "vintage_explorer.jpg",
+      "Explore the depths with the Dive Master, a water-resistant watch built for underwater adventures.",
+    price: 219.99,
+    image: "./images/Slider/Sport3.jpg",
+   
   },
+ 
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -88,13 +90,13 @@ function displayProductInfo(product) {
 
   if (product) {
     productInfoDiv.innerHTML = `
+                <figure><img src="${product.image}" alt="${product.name}"></figure>
+                <div class="text" >
                 <h2>${product.name}</h2>
                 <h4><span>$</span>${product.price.toFixed(2)}</h4>
-                <p>${product.description}</p>                    
-                <img src="${product.image}" alt="${
-      product.name
-    }" style="max-width: 300px;">
-            `;
+                <p>${product.description}</p>    
+                <a href="./catalog.html" class="readMore">EXPLORE MODELS</a>                
+                </div> `;
   } else {
     productInfoDiv.innerHTML = "<p>Product not found</p>";
   }
@@ -124,11 +126,12 @@ function createWatchCard(watch) {
   nameHeader.textContent = watch.name;
 
   const priceParagraph = document.createElement("p");
-  priceParagraph.textContent = `Price: $${watch.price.toFixed(2)}`;
+  priceParagraph.textContent = `$${watch.price.toFixed(2)}`;
+  
 
   const addToCart = document.createElement("a");
   addToCart.className = "readMore";
-  addToCart.textContent = "Add to Cart";
+  addToCart.textContent = "See Details";
   addToCart.href = `./product.html#${watch.id}`;
 
   // Append elements to the card

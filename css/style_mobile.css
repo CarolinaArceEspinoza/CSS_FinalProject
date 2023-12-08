@@ -1,0 +1,229 @@
+/* SOME CORRECTIONS FOR SMALLER DEVICES */
+@media only screen and (max-width: 700px){ 
+
+/* GENERAL STYLES */    
+h1 {
+    font-size:100px;
+    margin-top: -30px;
+    }
+h2 {
+    font-size: 40px;
+    }
+
+ /* MENU  DESKTOP */
+ .menu {
+    display: none;
+}
+.menu_mobile{
+   display: inline-block;
+}
+ 
+/* HOME HEADER AND FIRST BLOCK */
+.home_content1 {
+    width: 100%;
+    padding: 10px;
+}
+.home_content1 div {
+    background: rgba(0,0,0,0.7);;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8043811274509804) 58%);        padding-bottom: 200px;
+    }
+.parallax-bg {
+    background-position: -615px bottom;
+    background-size: cover;
+    background-attachment: initial;
+    }
+
+/* SECOND SECTION - Rows to Column */    
+#s2 figure img {
+     margin: 0px 10px;
+}
+#s2 ul {
+	flex-direction: column;
+}
+#s2 ul li {
+	width: 96%;
+	margin-bottom: 20px;
+}  
+
+/* THIRD SECTION - BLOCK OF TEXT */
+#s3 {
+    background-attachment: initial;
+    background-size: cover;
+    background-position: -120px bottom;
+}
+#s3 div {
+     width: 90%;
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+}
+#s3 h2 {
+    font-size: 55px;
+    text-align: center;
+}
+
+/* SECTION 4 - FEATURES GALLERY WITH POP UP */
+#features ul li {
+    flex-direction: column!important;
+}
+#features h1 {
+    font-size: 45px!important;
+    line-height: 45px;
+    margin: 20px 0px 0px 20px;
+}
+
+/* POP UP */
+.popup{
+    width: 80%;
+    height: 60%;
+}
+.popup h1 {
+    font-size: 45px!important;
+    line-height: 45px!important;
+    margin: 20px 0px!important;
+}
+.popup p {
+    margin: 0px;
+    font-size: 16px!important;
+    line-height: 20px;
+}
+.box{
+    width: 70%;
+}
+
+/* SECTION 5 - CHRISTMAS TITLE */
+.title {
+    background-position: top left, top right;
+    padding: 1%;
+    background-size: 55%;
+    background-repeat: repeat-y;
+}
+.title h1 {
+    text-shadow: 0px 0px 6px black;
+    font-size: 65px;
+}
+.title p {
+    margin-bottom: 10px;
+}
+
+/* SECTION 6 - PRODUCTS SLIDER */
+.content_slider div{
+    justify-content: space-between;
+}
+.content_slider figure figcaption {
+    font-size: 15px;
+    line-height: 15px;
+}
+.content_slider h2 {
+    font-size: 15pt !important;
+}
+.content_slider p {
+    font-size: 12pt !important;
+}
+#slider{
+    min-height: 52vw;
+}
+#slider li .content_slider{
+    padding: 10px 35px;
+}
+#slider figure img {
+    width: 100%;
+    margin-bottom: -5px;
+}
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 20pt;
+}
+#container-slider .arrowPrev{
+    left: 15px;
+}
+#container-slider .arrowNext{
+    right: 15px !important;
+}
+.btnSlider{
+    font-size: 9pt;
+line-height: 10px;
+padding: 2px 7px;
+font-weight: 200;
+}
+
+/* FOOTER */
+footer #links ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer #links li {
+    border:0px
+}
+#newsletter {
+    flex-direction: column;
+}
+#newsletter form, .formText  {
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+/* INTERNAL PAGES */
+.productsPage {
+    margin: 30px auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.productsPage p {
+    width: 80%;
+    margin: 0px 10%;
+}
+.productsPage h2, .productsPage h4 {
+    text-align: center;
+}
+.productsPage figure {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.productsPage .text {
+    padding: 0px 10px 30px 10px;
+}
+.productsPage .readMore {
+    width: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin: 30px auto;
+}
+
+/* ABOUT US */
+#aboutInt {
+    padding-top: 30px;
+}
+#aboutInt div {
+    width: 90%;
+    float: right;
+    margin: 5%;
+    background: rgba(0,0,0,0.7);
+    padding: 5%;
+}
+.list_int li {
+    flex-direction: column!important;
+}
+
+/* CONTACT PAGE AND FORM */
+#contactInt {
+    padding-top: 30px;
+}
+#contactInt div {
+    width: 90%;
+    float: right;
+    margin: 5%;
+    background: rgba(0,0,0,0.7);
+    padding: 5%;
+}
+#contactInt h1 {
+    font-size: 65px;
+}
+ 
+/* WATCHES CATALOG PAGE */
+.watch-catalog-title {
+    font-size: 76px;
+    line-height: 75px;
+    margin-top: 30px;
+}
+}
