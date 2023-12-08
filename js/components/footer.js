@@ -21,20 +21,22 @@ footer.innerHTML = `
   </form>
 </section>
 
-<nav id="social">
-  <ul>
-    <li><a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="instagram"/></a></li>
-    <li><a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp"/></a></li>
-    <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook"/></a></li>
-    <li><a href="https://www.tiktok.com/" target="_blank"><img src="images/tik-tok.svg" alt="tik-tok"/></a></li>
-  </ul>
-</nav>
+  <nav id="social">
+    <ul>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="../../images/instagram.svg" alt="instagram"/></a></li>
+      <li><a href="https://web.whatsapp.com/" target="_blank"><img src="../../images/whatsapp.svg" alt="whatsapp"/></a></li>
+      <li><a href="https://www.facebook.com/" target="_blank"><img src="../../images/facebook.svg" alt="facebook"/></a></li>
+      <li><a href="https://www.tiktok.com/" target="_blank"><img src="../../images/tik-tok.svg" alt="tik-tok"/></a></li>
+    </ul>
+  </nav>
 
-<nav id="links">
-  <ul>
-    <li style="color: #a5834c; border: 0px">References:</li>
-    <li><a href="https://pixabay.com/" target="_blank">Images Pixabay</a></li>
-    <li><a href="https://www.freepik.com/" target="_blank">Images Freepik</a></li>
-    <li><a href="https://www.michaelkors.com/ca/en/men/watches/" target="_blank">Watches Examples</a></li>
-  </ul>
-</nav>`;
+  <nav id="links">
+    <ul>
+      <li style="color: #a5834c; border: 0px">References:</li>
+      <li><a href="https://pixabay.com/" target="_blank">Images Pixabay</a></li>
+      <li><a href="https://www.freepik.com/" target="_blank">Images Freepik</a></li>
+      <li><a href="https://www.michaelkors.com/ca/en/men/watches/" target="_blank">Watches Examples</a></li>
+    </ul>
+  </nav>
+</section>
+`;
