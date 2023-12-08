@@ -95,7 +95,7 @@ function displayProductInfo(product) {
                 <h2>${product.name}</h2>
                 <h4><span>$</span>${product.price.toFixed(2)}</h4>
                 <p>${product.description}</p>    
-                <a href="./catalog.html" class="readMore">EXPLORE MODELS</a>                
+                <a href="./catalog.html" class="readMore">CATALOG</a>                
                 </div> `;
   } else {
     productInfoDiv.innerHTML = "<p>Product not found</p>";
@@ -131,7 +131,7 @@ function createWatchCard(watch) {
 
   const addToCart = document.createElement("a");
   addToCart.className = "readMore";
-  addToCart.textContent = "See Details";
+  addToCart.textContent = "Details";
   addToCart.href = `./product.html#${watch.id}`;
 
   // Append elements to the card
