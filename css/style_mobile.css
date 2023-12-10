@@ -28,7 +28,7 @@ h2 {
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8043811274509804) 58%);        padding-bottom: 200px;
     }
 .parallax-bg {
-    background-position: -615px bottom;
+    background-position: -810px bottom;
     background-size: cover;
     background-attachment: initial;
     }
@@ -74,12 +74,15 @@ h2 {
 /* POP UP */
 .popup{
     width: 80%;
-    height: 60%;
+    height: 70%;
 }
 .popup h1 {
     font-size: 45px!important;
     line-height: 45px!important;
     margin: 20px 0px!important;
+}
+.popup figcaption {
+    font-size: 14px;
 }
 .popup p {
     margin: 0px;
