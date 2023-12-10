@@ -994,17 +994,18 @@ footer #links li a:visited {
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
-    flex-basis: 30%;
+    align-items: stretch;
+    flex: 30%;
+    align-content: space-around;
 }
 .watch-card p {
     text-align: center;
     padding: 10px 0px;
 }
 .watch-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .watch-card h2 {
