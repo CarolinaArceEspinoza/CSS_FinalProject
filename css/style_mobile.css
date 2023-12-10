@@ -180,6 +180,10 @@ footer #links li {
     flex-direction: column;
     flex-wrap: nowrap;
 }
+.productsPage figure img {
+    width: 100%;
+    height: auto;
+}
 .productsPage .text {
     padding: 0px 10px 30px 10px;
 }
