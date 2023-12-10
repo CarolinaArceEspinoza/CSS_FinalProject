@@ -233,4 +233,7 @@ footer #links li {
     line-height: 75px;
     margin-top: 30px;
 }
+.watch-card {
+    flex-basis: 90%;
+}
 }

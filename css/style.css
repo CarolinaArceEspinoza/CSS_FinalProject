@@ -989,7 +989,6 @@ footer #links li a:visited {
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px;
-    max-width: 300px;
     border-radius: 5px;
     background: rgba(0,0,0,0.5);
     text-align: center;
@@ -998,6 +997,7 @@ footer #links li a:visited {
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
+    flex-basis: 30%;
 }
 .watch-card p {
     text-align: center;
